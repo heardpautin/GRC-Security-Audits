@@ -1,46 +1,95 @@
-## 🏗️ Project Readme: Automated GRC Compliance Checks
+# 🏗️ Automated GRC Compliance Checks  
+### Checkov-Driven Mapping for NIST, CIS, and ISO 27001
 
-### Automated GRC Compliance: Checkov Integration for NIST, CIS, and ISO 27001
-
-A framework designed to streamline and automate **Governance, Risk, and Compliance (GRC)** checks for Infrastructure-as-Code (IaC) configurations using **Checkov**, providing clear, actionable reporting mapped directly to major compliance standards. 
-
----
-
-## 🚧 Status: Project Under Development
-
-**Please Note:** This project is currently in the **initial development and configuration phase.**
-
-* The core concept is defined, but the **compliance mapping files** are still being populated.
-* The reporting script (`generate_report.py`) is being written and tested.
-* Contributions and feedback on the mapping logic are welcome even at this early stage!
+A framework designed to streamline **Governance, Risk, and Compliance (GRC)** checks for Infrastructure-as-Code (IaC) configurations using **Checkov**, with clear and actionable reporting mapped directly to major compliance standards.
 
 ---
 
-## 🌟 Goals and Future Features
+## 🚧 Project Status: Under Development
 
-* **Automated Scanning:** Integrate **Checkov** to automatically scan common IaC frameworks (Terraform, CloudFormation, Kubernetes, etc.) for security and compliance misconfigurations.
-* **Compliance Mapping:** Develop a robust layer to translate Checkov findings directly to relevant controls in:
-    * **NIST SP 800-53/CSF**
-    * **CIS Benchmarks**
-    * **ISO/IEC 27001**
-* **Actionable Reports:** Generate human-readable reports that highlight non-compliant resources and clearly state the specific GRC control violated.
-* **CI/CD Integration Ready:** Design for easy integration into any Continuous Integration/Continuous Deployment pipeline.
+This project is in the **initial development and configuration phase**.
+
+- Compliance mapping files are being drafted.  
+- The reporting engine (`generate_report.py`) is in progress.  
+- Contributions and feedback are welcome during this early stage.
+
+---
+
+## 🌟 Project Goals & Roadmap
+
+### ✔️ Automated IaC Scanning  
+Use **Checkov** to scan Terraform, CloudFormation, Kubernetes, serverless, and other IaC frameworks.
+
+### ✔️ Compliance Mapping  
+Translate Checkov findings to major GRC frameworks, including:
+
+- **NIST SP 800-53 / CSF**  
+- **CIS Benchmarks**  
+- **ISO/IEC 27001**
+
+### ✔️ Actionable GRC Reports  
+Generate readable compliance reports that:
+
+- Identify misconfigurations  
+- Cite the exact violated control  
+- Provide remediation guidance (planned)  
+
+### ✔️ CI/CD Integration  
+Designed for integration with GitHub Actions, GitLab CI, Azure DevOps, Jenkins, and more.
 
 ---
 
 ## 🛠️ Prerequisites
 
-Once fully developed, you will need the following installed:
+These will be required once the first working build is complete:
 
-* **Python** (3.8+)
-* **pip** (Python package installer)
-* **Checkov** (Can be installed via pip)
-    ```bash
-    pip install checkov
-    ```
+- **Python 3.8+**  
+- **pip**  
+- **Checkov**  
+  ```bash
+  pip install checkov
+  ```
 
 ---
 
 ## 📁 Repository Structure (Planned)
 
-This is the planned file structure for the repository:
+```
+grc-checkov-framework/
+│
+├── mappings/
+│   ├── nist_800_53.json
+│   ├── cis_benchmarks.json
+│   └── iso_27001.json
+│
+├── reports/
+│   └── (auto-generated scan results)
+│
+├── src/
+│   ├── generate_report.py
+│   ├── mapper.py
+│   └── utils.py
+│
+├── examples/
+│   ├── terraform/
+│   ├── kubernetes/
+│   └── cloudformation/
+│
+└── README.md
+```
+
+---
+
+## 📌 Notes
+
+This repository will evolve as compliance mappings mature and testing environments are expanded.  
+Feel free to open issues, suggest mappings, or contribute sample IaC templates.
+
+---
+
+## 📬 Contact / Links
+
+GitHub: **github.com/heardpautin**  
+(Feel free to submit PRs or open issues!)
+
+---
